@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "course-deadline-reporting-agent"
+version = "0.1.0"
+description = "Run a tool-calling loop that turns learner deadlines into an educator report."
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115", "openai>=1.52", "pydantic>=2.9", "uvicorn>=0.32"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
